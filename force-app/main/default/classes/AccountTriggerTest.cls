@@ -3,18 +3,18 @@ public class AccountTriggerTest {
     
     @isTest static void createBulkAccountTest(){
         
-        List<Account> acnts = new List<Account>();
+        List<Account> account_list = new List<Account>();
         for(Integer i = 0; i < 200; i++){
             Account a = new Account();
             a.Name = 'Test' + i;
             a.BillingState = 'CA';
             
-            acnts.add(a);
+            account_list.add(a);
             
         }
         
         Test.startTest();
-        insert acnts;
+        insert account_list;
         Test.stopTest();
         
         List<Account> ac_verify = [select Id, ShippingState from Account];

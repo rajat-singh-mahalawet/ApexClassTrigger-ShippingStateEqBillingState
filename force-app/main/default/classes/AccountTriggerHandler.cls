@@ -1,8 +1,8 @@
 public with sharing class AccountTriggerHandler {
     
-    public static void CreateAccounts(List<Account> acnts){        
+    public static void CreateAccounts(List<Account> account_list){        
         
-        for (Account a : acnts){
+        for (Account a : account_list){
             
             if (a.ShippingState != a.BillingState){
                 
